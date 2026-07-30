@@ -8,7 +8,7 @@
 
 This entry uses one of the course's backup practice scenarios (a pre-written debugging problem). In this scenario, Tia, a study-group member, is learning about first-class functions in Python. She writes a loop that creates five small functions (lambdas), each meant to print a different number from 0 to 4. Instead, running all five prints "4 4 4 4 4," and she doesn't understand why.
 
-![image.png](image 5.png)
+![image.png](image5.png)
 
 ## Process
 
