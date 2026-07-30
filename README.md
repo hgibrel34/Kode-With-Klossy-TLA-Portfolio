@@ -22,6 +22,11 @@ Start with this top-level README for program context, then work through the modu
 
 ### Final Reflection
 
-[describe any final thoughts after accelerator completion and/or tailor for future resumé use]
+Before this program, I thought of technical leadership as a role, that existed alongside engineering rather than inside it. Through TLA, I learned that communication is what makes you valuable as a team member, and that it's multifaceted: it relies on understanding who you're working with and what you're working on, not just explaining things clearly.
 
-Placeholder reflection text.
+Throughout the course, I built a better understanding of my technical communities and their stakeholders, and I identified my own areas for improvement in communication, like tendency to use filler words. In M3, I learned how to give more productive critique. In M4, I shifted how I approached helping someone solve a problem, focusing on keeping the solution theirs rather than handing it to them.
+
+Technical leadership isn't a separate role I need to grow into. It's a practice built into how I already work with others, and one I'll keep developing.
+
+
+
