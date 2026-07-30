@@ -22,11 +22,7 @@ Start with this top-level README for program context, then work through the modu
 
 ### Final Reflection
 
-Before this program, I thought of technical leadership as a role, that existed alongside engineering rather than inside it. Through TLA, I learned that communication is what makes you valuable as a team member, and that it's multifaceted: it relies on understanding who you're working with and what you're working on, not just explaining things clearly.
-
-Throughout the course, I built a better understanding of my technical communities and their stakeholders, and I identified my own areas for improvement in communication, like tendency to use filler words. In M3, I learned how to give more productive critique. In M4, I shifted how I approached helping someone solve a problem, focusing on keeping the solution theirs rather than handing it to them.
-
-Technical leadership isn't a separate role I need to grow into. It's a practice built into how I already work with others, and one I'll keep developing.
+When this program started, I thought technical leadership was a role that existed alongside engineering rather than inside it. Twelve weeks later, I understand that communication is what makes you valuable as a teammate, and that it's multifaceted: it depends on understanding who you're working with and what you're working on, not just explaining things clearly. Early on, I mapped my technical communities and realized how many stakeholders I'd never actually considered, including my own habits under frustration, like defaulting to figuring things out alone instead of asking for help. I learned how to give critique that helps someone improve instead of shutting them down. The hardest shift was in how I helped someone stuck on a problem: instead of jumping to the answer, I learned to ask questions and let the solution stay theirs. For my Impact Project, I noticed labmates in my AI/ML fellowship hitting the same wall I did: learning tools and concepts in isolated units without ever seeing how they chain into one process. I built a stage-by-stage reference guide connecting each phase of the ML lifecycle to the actual code behind it, so a stuck classmate could see the whole machine, not just the pieces. I used to measure myself by what I could solve alone. Now I measure it by whether the people around me are more capable after working with me.
 
 
 
