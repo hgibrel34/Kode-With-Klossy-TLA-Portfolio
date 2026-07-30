@@ -10,11 +10,11 @@ The best models, optimizations, and analyses are rendered useless if people don�
 
 Each module or project from the Technical Leadership Accelerator lives in the root directory as a folder:
 
-- **`M1-The-Unasked-Question.md`** — Mapping my technical stakeholders and my own communication patterns under frustration.
+- **`M1-The-Unasked-Question/`** — Mapping my technical stakeholders and my own communication patterns under frustration.
 - **`M2-Navigator-Session/`** — Learning to say exactly what I mean through precise language, a 60-second explanation, and navigating without grabbing the keyboard.
 - **`M3-Peer-Code-Review/`** — Giving feedback that guides an author toward their own fix rather than critiquing the coder.
-- **`M4-Questions-Only.md`** — Helping a stuck teammate by asking questions instead of handing over the answer.
-- **`Impact-Project-[Title]/`** — Applying precision, feedback, and inquiry to a real problem.
+- **`M4-Questions-Only/`** — Helping a stuck teammate by asking questions instead of handing over the answer.
+- **`Understanding the ML Lifecycle Through Concepts and Code/`** — Applying precision, feedback, and inquiry to a real problem.
 
 Folders each act as a self-contained unit: the `README.md` inside serves as that module's write-up, with any attachments (video walkthroughs, screenshots, exported files) sitting alongside it in the same folder.
 
