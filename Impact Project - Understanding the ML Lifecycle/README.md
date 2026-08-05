@@ -9,9 +9,6 @@ use in my coursework, so jumping into a fast-paced ML program was difficult.
 The course is structured around the ML lifecycle (from business
 understanding through deployment) and taking in all of it at once was a lot to digest.
 
-This guide is what I wish I'd had in my first few weeks: something that shows
-the big picture of the whole process giving you insight on how it all connects.
-
 ## Who this is for
 
 Labmates/future cohorts working through the BTT ML/AI course, especially anyone
