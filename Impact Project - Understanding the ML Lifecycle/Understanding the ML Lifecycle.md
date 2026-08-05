@@ -188,7 +188,7 @@ Unlike weights (which the model learns on its own), hyperparameters are values y
 
 - **Overfitting** — the model is too complex, and learns quirks specific to the training data that don't generalize. Low training error, high test error.
 - **Underfitting** — the model is too simple to capture real patterns. High error on both training and test data.
-![[Impact Project - Understanding the ML Lifecycle/Images/|372]]
+![[Impact Project - Understanding the ML Lifecycle/Images/overfitting-underfitting.png|372]]
 *Source: [SuperAnnotate](https://www.superannotate.com/blog/overfitting-and-underfitting-in-machine-learning)*
 
 | Task                  | Library / Function                                                    | What It Does                                                            |
