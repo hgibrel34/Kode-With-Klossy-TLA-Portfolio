@@ -2,7 +2,7 @@ I'm an Industrial and Systems Engineering student at Virginia Tech, currently pa
 
 This guide walks through each stage of the ML lifecycle, connecting the core concept to the code you'd actually write to apply it.
 
-<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/cycle%20diagram.png" width="366">
+<img src="Images/cycle%20diagram.png" width="366">
 
 *Source: [michael-fuchs-python](https://michael-fuchs-python.netlify.app/2020/08/21/the-data-science-process-crisp-dm/)*
 
@@ -21,7 +21,7 @@ This guide walks through each stage of the ML lifecycle, connecting the core con
 ---
 **Core concept:** Before touching the data, you must first ask yourself: what kind of problem am I actually solving? This shapes all your choices down the line: the data that you need, the libraries you'll use, and the kind of model you'll build.
 
-![Framing diagram](Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/framing%20image.png)
+![Framing diagram](Images/framing%20image.png)
 
 **Vocabulary:**
 
@@ -163,25 +163,25 @@ Once your data is clean, you can't train and test on the same rows, that only te
 
 **KNN (K-Nearest Neighbors)** — Good for classification, when similar examples likely share a label. Makes predictions by looking at the K closest data points and going with the majority label. There is no real "training," just storing data and comparing at prediction time.
 
-<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/KNN%20image.png" width="300">
+<img src="Images/KNN%20image.png" width="300">
 
 *Source: [ResearchGate](https://www.researchgate.net/figure/sualization-of-k-Nearest-Neighbors-with-two-classes-blue-circles-and-red-triangles-with_fig3_359786522)*
 
 **Decision Trees** — Good for classification or regression, when you want an interpretable model. Splits data into branches based on feature values, grouping similar examples together at each split.
 
-<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/DT%20image.png" width="183">
+<img src="Images/DT%20image.png" width="183">
 
 *Source: [codementor](https://www.codementor.io/@mgalarny/visualizing-decision-trees-with-python-scikit-learn-graphviz-matplotlib-154mszcto7)*
 
 **Logistic Regression** — Good for binary classification. Outputs a probability (0 to 1) that an example belongs to a class, based on a weighted combination of features.
 
-<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/LG%20image.png" width="300">
+<img src="Images/LG%20image.png" width="300">
 
 *Source: [Medium](https://medium.com/analytics-vidhya/logistic-regression-b30ca0bec653)*
 
 **Linear Regression** — Good for predicting a continuous number. Fits a straight line (or hyperplane) through the data to model the relationship between features and a numeric label.
 
-<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/LR%20image.png" width="300">
+<img src="Images/LR%20image.png" width="300">
 
 *Source: [python-graph-gallery](https://python-graph-gallery.com/556-visualize-linear-regression/)*
 
@@ -207,7 +207,7 @@ Unlike weights (which the model learns on its own), hyperparameters are values y
 - **Overfitting** — the model is too complex, and learns quirks specific to the training data that don't generalize. Low training error, high test error.
 - **Underfitting** — the model is too simple to capture real patterns. High error on both training and test data.
 
-<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/overfitting-underfitting.png" width="372">
+<img src="Images/overfitting-underfitting.png" width="372">
 
 *Source: [SuperAnnotate](https://www.superannotate.com/blog/overfitting-and-underfitting-in-machine-learning)*
 
@@ -241,7 +241,7 @@ Unlike weights (which the model learns on its own), hyperparameters are values y
 | Holdout method          | Split data once into training and validation sets. Simple and works well with large datasets.                                                                                                                         |
 | K-fold cross-validation | Split data into k folds, train on k-1 of them and validate on the remaining one, repeat until every fold has been the validation set once, then average the results. More reliable, especially with smaller datasets. |
 
-<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/data%20split%20image.png" width="500">
+<img src="Images/data%20split%20image.png" width="500">
 
 *Source: [Harksys](https://harksys.com/blog/splitting-data-into-train-validation-and-test-sets/)*
 
