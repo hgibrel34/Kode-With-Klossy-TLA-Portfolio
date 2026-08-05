@@ -1,7 +1,9 @@
 I'm an Industrial and Systems Engineering student at Virginia Tech, currently participating in the Break Through Tech AI/ML fellowship, where I'm working toward a Machine Learning certificate. Since my coding skills had gone dormant without regular use in my coursework, jumping straight into this program was an adjustment. The course is structured around the ML lifecycle, from business understanding through exploratory data analysis to deployment; taking in all of these steps at once, especially the core concepts, libraries, and functions behind each stage, was a lot. A guide that connected the big picture of the lifecycle to my own progress through it would have made it much easier for me and my peers.
 
 This guide walks through each stage of the ML lifecycle, connecting the core concept to the code you'd actually write to apply it.
-![[Impact Project - Understanding the ML Lifecycle/Images/cycle diagram.png|366]] 
+
+<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/cycle%20diagram.png" width="366">
+
 *Source: [michael-fuchs-python](https://michael-fuchs-python.netlify.app/2020/08/21/the-data-science-process-crisp-dm/)*
 
 ## Table of Contents
@@ -18,7 +20,8 @@ This guide walks through each stage of the ML lifecycle, connecting the core con
 ## Framing: Supervised vs Unsupervised Learning
 ---
 **Core concept:** Before touching the data, you must first ask yourself: what kind of problem am I actually solving? This shapes all your choices down the line: the data that you need, the libraries you'll use, and the kind of model you'll build.
-![[Impact Project - Understanding the ML Lifecycle/Images/framing image.png]]
+
+![Framing diagram](Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/framing%20image.png)
 
 **Vocabulary:**
 
@@ -77,7 +80,6 @@ Unsupervised Learning uses unlabeled examples, no pre-defined labels or categori
 A food delivery app wants to reduce late deliveries **(objective)**. To do that, they might predict whether a given order will arrive late **(outcome/label)**, using features like distance, time of day, restaurant prep time, and driver availability **(features)**.
 
 A simple rule, "flag any order over 5 miles," might catch some cases, but it ignores how prep time, traffic, and driver load interact, which is exactly the type of complex, data-rich pattern ML is suited for **(why ML)**.
-
 
 **Think about:**
 
@@ -159,13 +161,29 @@ Once your data is clean, you can't train and test on the same rows, that only te
 
 **Choosing a model — a few common options and when they fit:**
 
-| Model                     | Good for                                                           | Key idea                                                                                                                                                                     | Visual                                                                                                                                                                                 |
-| ------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| KNN (K-Nearest Neighbors) | Classification, when similar examples likely share a label         | Makes predictions by looking at the K closest data points and going with the majority label. There is no real "training," just storing data and comparing at prediction time | ![[Impact Project - Understanding the ML Lifecycle/Images/KNN image.png]]*Source: [ResearchGate](https://www.researchgate.net/figure/sualization-of-k-Nearest-Neighbors-with-two-classes-blue-circles-and-red-triangles-with_fig3_359786522)* |
-| Decision Trees            | Classification or regression, when you want an interpretable model | Splits data into branches based on feature values, groups similar examples together at each split                                                                            | ![[Impact Project - Understanding the ML Lifecycle/Images/DT image.png\|183]]*Source: [codementor](https://www.codementor.io/@mgalarny/visualizing-decision-trees-with-python-scikit-learn-graphviz-matplotlib-154mszcto7)*                   |
-| Logistic Regression       | Binary classification                                              | Outputs a probability (0 to 1) that an example belongs to a class, based on a weighted combination of features                                                               | ![[Impact Project - Understanding the ML Lifecycle/Images/LG image.png]] *Source: [Medium](https://medium.com/analytics-vidhya/logistic-regression-b30ca0bec653)*                                                                             |
-| Linear Regression         | Predicting a continuous number                                     | Fits a straight line (or hyperplane) through the data to model the relationship between features and a numeric label                                                         | ![[Impact Project - Understanding the ML Lifecycle/Images/LR image.png]]*Source: [python-graph-gallery](https://python-graph-gallery.com/556-visualize-linear-regression/)*                                                                   |
+**KNN (K-Nearest Neighbors)** — Good for classification, when similar examples likely share a label. Makes predictions by looking at the K closest data points and going with the majority label. There is no real "training," just storing data and comparing at prediction time.
 
+<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/KNN%20image.png" width="300">
+
+*Source: [ResearchGate](https://www.researchgate.net/figure/sualization-of-k-Nearest-Neighbors-with-two-classes-blue-circles-and-red-triangles-with_fig3_359786522)*
+
+**Decision Trees** — Good for classification or regression, when you want an interpretable model. Splits data into branches based on feature values, grouping similar examples together at each split.
+
+<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/DT%20image.png" width="183">
+
+*Source: [codementor](https://www.codementor.io/@mgalarny/visualizing-decision-trees-with-python-scikit-learn-graphviz-matplotlib-154mszcto7)*
+
+**Logistic Regression** — Good for binary classification. Outputs a probability (0 to 1) that an example belongs to a class, based on a weighted combination of features.
+
+<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/LG%20image.png" width="300">
+
+*Source: [Medium](https://medium.com/analytics-vidhya/logistic-regression-b30ca0bec653)*
+
+**Linear Regression** — Good for predicting a continuous number. Fits a straight line (or hyperplane) through the data to model the relationship between features and a numeric label.
+
+<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/LR%20image.png" width="300">
+
+*Source: [python-graph-gallery](https://python-graph-gallery.com/556-visualize-linear-regression/)*
 
 **Loss functions — how a model knows it's wrong:**
 
@@ -188,7 +206,9 @@ Unlike weights (which the model learns on its own), hyperparameters are values y
 
 - **Overfitting** — the model is too complex, and learns quirks specific to the training data that don't generalize. Low training error, high test error.
 - **Underfitting** — the model is too simple to capture real patterns. High error on both training and test data.
-![[Impact Project - Understanding the ML Lifecycle/Images/overfitting-underfitting.png|372]]
+
+<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/overfitting-underfitting.png" width="372">
+
 *Source: [SuperAnnotate](https://www.superannotate.com/blog/overfitting-and-underfitting-in-machine-learning)*
 
 | Task                  | Library / Function                                                    | What It Does                                                            |
@@ -220,8 +240,11 @@ Unlike weights (which the model learns on its own), hyperparameters are values y
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Holdout method          | Split data once into training and validation sets. Simple and works well with large datasets.                                                                                                                         |
 | K-fold cross-validation | Split data into k folds, train on k-1 of them and validate on the remaining one, repeat until every fold has been the validation set once, then average the results. More reliable, especially with smaller datasets. |
-![[Impact Project: Understanding the ML Lifecycle/Images/data split image.png]]
-*Source: [Harksys]([URL](https://harksys.com/blog/splitting-data-into-train-validation-and-test-sets/))*
+
+<img src="Impact%20Project%20-%20Understanding%20the%20ML%20Lifecycle/Images/data%20split%20image.png" width="500">
+
+*Source: [Harksys](https://harksys.com/blog/splitting-data-into-train-validation-and-test-sets/)*
+
 **Model Selection**
 
 Choosing the best model doesn't stop on the highest scorer, it involves:
@@ -302,6 +325,7 @@ Monitoring doesn't stop at deployment. Watch for:
 - What could go wrong between your validation environment and production?
 - How would you roll back if the model performs poorly in the real world? 
 - Who's responsible for the model once it's live? 
+
 ## Iteration
 ---
 **Core Concept:** The ML lifecycle is a loop. Iteration is where everything you learned from deployment and monitoring feeds back into earlier stages, business understanding gets revisited, new data gets collected, features get reworked, and the model gets retrained. A model is never truly final.
@@ -339,6 +363,6 @@ Going back to the e-commerce recommendation model, imagine customer behavior shi
 - At what point is a model "good enough" to redeploy, versus needing another pass?
 - Who decides when the business objective itself has changed?
 
+---
 
 *This guide reflects concepts covered in the Break Through Tech ML curriculum, and official documentation for the libraries referenced.*
-
