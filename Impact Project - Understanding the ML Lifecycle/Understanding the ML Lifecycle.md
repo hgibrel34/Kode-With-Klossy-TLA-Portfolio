@@ -1,6 +1,5 @@
-I'm an Industrial and Systems Engineering student at Virginia Tech, currently participating in the Break Through Tech AI/ML fellowship, where I'm working toward a Machine Learning certificate. Since my coding skills had gone dormant without regular use in my coursework, jumping straight into this program was an adjustment. The course is structured around the ML lifecycle, from business understanding through exploratory data analysis to deployment; taking in all of these steps at once, especially the core concepts, libraries, and functions behind each stage, was a lot. A guide that connected the big picture of the lifecycle to my own progress through it would have made it much easier for me and my peers.
-
-This guide walks through each stage of the ML lifecycle, connecting the core concept to the code you'd actually write to apply it.
+# Understanding the ML Lifecycle
+This guide walks through each stage of the ML lifecycle, connecting the core concept to the code you'd write to apply it.
 
 <img src="Images/cycle%20diagram.png" width="366">
 
@@ -93,21 +92,21 @@ A simple rule, "flag any order over 5 miles," might catch some cases, but it ign
 
 **What you're looking for:**
 
-- **Outliers** — values that sit far outside the normal range. These can be errors, or they can be rare events worth investigating rather than removing.
-- **Missing Data** — gaps in your dataset. Ignoring these gaps can bias your model if the gaps aren't random.
-- **Class Imbalance** — when one category dominates your data significantly more than others. This results in a model that looks accurate overall but performs poorly on the underrepresented group.
-- **Summary Statistics** — mean, median, standard deviation, and percentiles give you a big picture read on where your data sits and how spread out it is, before looking at a single row in detail.
+- **Outliers**: values that sit far outside the normal range. These can be errors, or they can be rare events worth investigating rather than removing.
+- **Missing Data**: gaps in your dataset. Ignoring these gaps can bias your model if the gaps are not random.
+- **Class Imbalance**: when one category dominates your data significantly more than others. This results in a model that looks accurate overall but performs poorly on the underrepresented group.
+- **Summary Statistics**: mean, median, standard deviation, and percentiles give you a big picture read on where your data sits and how spread out it is.
 
 | Concept            | Library / Function                                                | What It Does                                                         |
 | ------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Outliers           | `seaborn.boxplot()`, `seaborn.histplot()`, `matplotlib.scatter()` | Visualize distributions to find values outside the normal range      |
-| Missing Data       | `.isnull().sum()` (pandas)                                        | Counts missing values per column                                     |
-| Class Imbalance    | `.value_counts()` (pandas)                                        | Shows the distribution of a categorical or label column              |
+| Missing Data       | `.isnull().sum()` (pandas)                                        | Counts missing values in each column                                     |
+| Class Imbalance    | `.value_counts()` (pandas)                                        | Shows the distribution of a categorical column              |
 | Summary Statistics | `.describe()` (pandas)                                            | Generates mean, median, std, and percentiles for all numeric columns |
 
 **Notes:**
 
-- This stage is diagnostic, not corrective. Your goal is to identify problems within your data, not solve them quite yet.
+- This stage is diagnostic, not corrective. Your goal is to identify problems within your data, you're not solving anything yet.
 - By the end of this step, you'll have analyzed individual columns and relationships between columns.
 - A good EDA makes every later stage easier.
 
@@ -121,13 +120,13 @@ A simple rule, "flag any order over 5 miles," might catch some cases, but it ign
 
 ## Data Preparation
 ---
-**Core Concept:**  This stage takes everything EDA reveals and fixes it, then splits your cleaned dataset so you can properly train and evaluate a model on separate data.
+**Core Concept:**  This stage takes everything EDA reveals and fixes it, then splits your cleaned dataset so you can train and evaluate a model on separate data.
 
 **Acting on what you found:**
 
-- **Outliers** — either remove them, or cap them at a reasonable percentile instead of deleting (winsorizing), depending on whether they're errors or meaningful extremes.
-- **Missing data** — drop the affected rows/columns, or fill them with a value (like the mean) depending on how much is missing and why.
-- **Categorical features** — convert them into a numeric format a model can actually use (one-hot encoding is the most common).
+- **Outliers**: either remove or cap them at a reasonable percentile instead of deleting (winsorizing), depending on if they're errors or relevant extremes.
+- **Missing data**: drop affected rows/columns, or fill with a value (like the mean) depending on how much is missing and why.
+- **Categorical features**: convert them into a numeric format a model can actually use (one-hot encoding is most common).
 
 **Splitting your data:**
 
@@ -157,9 +156,9 @@ Once your data is clean, you can't train and test on the same rows, that only te
 
 ## Modeling & Optimization
 ---
-**Core Concept:** This is the stage where your cleaned data gets used to build something. Modeling means choosing an algorithm suited to your problem, training it on your data, and using a loss function to measure and improve model performance. Optimization is the process of guiding the model toward better performance through the feedback loop.
+**Core Concept:** This is the stage where your clean data gets used to build something. Modeling means choosing an algorithm suited to your problem, training it on your data, and using a loss function to quantify and improve model performance. Optimization is where you guide the model towards better performance through the feedback loop.
 
-**Choosing a model — a few common options and when they fit:**
+**Choosing a model (a few common options and when they fit):**
 
 **KNN (K-Nearest Neighbors)** — Good for classification, when similar examples likely share a label. Makes predictions by looking at the K closest data points and going with the majority label. There is no real "training," just storing data and comparing at prediction time.
 
@@ -167,30 +166,30 @@ Once your data is clean, you can't train and test on the same rows, that only te
 
 *Source: [ResearchGate](https://www.researchgate.net/figure/sualization-of-k-Nearest-Neighbors-with-two-classes-blue-circles-and-red-triangles-with_fig3_359786522)*
 
-**Decision Trees** — Good for classification or regression, when you want an interpretable model. Splits data into branches based on feature values, grouping similar examples together at each split.
+**Decision Trees** Good for classification or regression, when you want an interpretable model. Splits data into branches based on feature values, grouping similar examples together at each split.
 
 <img src="Images/DT%20image.png" width="183">
 
 *Source: [codementor](https://www.codementor.io/@mgalarny/visualizing-decision-trees-with-python-scikit-learn-graphviz-matplotlib-154mszcto7)*
 
-**Logistic Regression** — Good for binary classification. Outputs a probability (0 to 1) that an example belongs to a class, based on a weighted combination of features.
+**Logistic Regression** Good for binary classification. Outputs a probability (0 to 1) that an example belongs to a class, based on a weighted combination of features.
 
 <img src="Images/LG%20image.png" width="300">
 
 *Source: [Medium](https://medium.com/analytics-vidhya/logistic-regression-b30ca0bec653)*
 
-**Linear Regression** — Good for predicting a continuous number. Fits a straight line (or hyperplane) through the data to model the relationship between features and a numeric label.
+**Linear Regression** Good for predicting a continuous number. Fits a straight line (or hyperplane) through the data to model the relationship between features and a numeric label.
 
 <img src="Images/LR%20image.png" width="300">
 
 *Source: [python-graph-gallery](https://python-graph-gallery.com/556-visualize-linear-regression/)*
 
-**Loss functions — how a model knows it's wrong:**
+**Loss functions (how a model knows it's wrong):**
 
 A loss function measures how far off a model's predictions are from the actual labels. High loss means bad predictions; low loss means the model is doing well. Different problem types use different loss functions:
 
-- **Log loss** — used for classification, penalizes confident-but-wrong predictions 
-- **Mean squared error (MSE)** — used for regression, squares the difference between predicted and actual values, bigger errors are penalized more
+- **Log loss**: used for classification, penalizes confident-but-wrong predictions 
+- **Mean squared error (MSE)**: used for regression, squares the difference between predicted and actual values, bigger errors are penalized more
 
 **Gradient descent- how a model actually improves:**
 
@@ -198,14 +197,14 @@ Training is iterative. Gradient descent starts with random model parameters (wei
 
 Learning rate controls how big each step is. Too high, and you can overshoot the best point and never settle. Too low, and training takes forever to converge.
 
-**Hyperparameters- the settings you choose before training:**
+**Hyperparameters (the settings you choose before training):**
 
 Unlike weights (which the model learns on its own), hyperparameters are values you set beforehand: how many neighbors K to use in KNN, how deep a decision tree can grow, what learning rate to use in gradient descent. Tuning these is part of your job, there's no universal "right" value, only what performs best for your specific data.
 
-**Overfitting vs. underfitting — the balancing act:**
+**Overfitting vs. underfitting:**
 
-- **Overfitting** — the model is too complex, and learns quirks specific to the training data that don't generalize. Low training error, high test error.
-- **Underfitting** — the model is too simple to capture real patterns. High error on both training and test data.
+- **Overfitting**: the model is too complex, and learns quirks specific to the training data that don't generalize. Low training error, high test error.
+- **Underfitting**: the model is too simple to capture real patterns. High error on both training and test data.
 
 <img src="Images/overfitting-underfitting.png" width="372">
 
